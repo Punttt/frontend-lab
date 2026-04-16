@@ -47,20 +47,48 @@ header {
     }
 }
 
+main {
+    .container-sm{
 
+        #list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-
-
-
-
-
-
-
-
+            .item {
+                background-color: beige;
+                padding: 1rem;
+                border-radius: 8px;
+            }
+        }
+    }
+}
 
 // Utility
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
+}
+
+.container-sm {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    text-align: center;
+    font-family: inherit;
+    cursor: pointer;
+    color: #fff;
+    background-color: tomato;
+    transition: transform 3s ease;
+}
+
+button:hover {
+    opacity: 0.7;
 }
