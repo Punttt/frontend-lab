@@ -21,10 +21,32 @@
     </header>
 
     <main>
-      <div class="container">
+      <div class="container-sm">
         <h2>Lägga till</h2>
+
+        <form id="add-work">
+          <label for="companyname">Företag:</label>
+          <input type="text" name="companyname" id="companyname">
+
+          <label for="jobtitle">Arbetstitel:</label>
+          <input type="text" name="jobtitle" id="jobtitle">
+
+          <label for="location">Plats:</label>
+          <input type="text" name="location" id="location">
+
+          <label for="startdate">Startdatum:</label>
+          <input type="date" name="startdate" id="startdate">
+
+          <label for="enddate">Startdatum:</label>
+          <input type="date" name="enddate" id="enddate">
+
+          <label for="description">Beskrivning:</label>
+          <textarea name="description" id="description"></textarea>
+
+          <input type="submit" value="Spara">
+        </form>
       </div>
     </main>
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/add.js"></script>
   </body>
 </html>
