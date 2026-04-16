@@ -41,3 +41,24 @@ async function loadData() {
         console.error("Fel vi hämtning av data: " + error);
     }
 }
+
+// Funktion för delete
+async function deleteItem(id) {
+    console.log(id);
+    try {
+        const res = await fetch(`${apiUrl}/${id}`, {
+            method: "DELETE"
+        });
+
+        if(!res.ok) {
+            console.error("Kunde inte radera posten");
+            return;
+        }
+
+        // Laddar om sidan på nytt.
+        loadData();
+        
+    } catch (error) {
+        console.error("Fel vi delete: " + error);
+    }
+}
