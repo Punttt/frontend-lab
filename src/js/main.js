@@ -1,4 +1,4 @@
-const apiUrl = "";
+const apiUrl = "http://localhost:3000/api/workexperience";
 
 async function loadData() {
     const res = await fetch(apiUrl);
