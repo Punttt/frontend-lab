@@ -17,6 +17,19 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
+            const res = await fetch(apiUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newItem)
+            });
+
+            if(!res) {
+                console.error("Kunde inte spara posten");
+                return;
+            }
+
+            alert("Post sparad!");
+            form.reset();
 
         } catch (error) {
             console.error("Fel vid POST:" + error);
