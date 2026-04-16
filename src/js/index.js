@@ -17,7 +17,7 @@ async function loadData() {
             div.innerHTML = `
                 <h3>${item.companyname}</h3>
                 <p>${item.jobtitle} - ${item.location}</p>
-                <p>${item.startdate} - ${item.enddate}</p>
+                <p>${formatDate(item.startdate)} - ${formatDate(item.enddate)}</p>
                 <p>${item.description}</p>
                 <button class="delete-btn" data-id="${item.id}">Delete</button>
             `;
@@ -57,6 +57,11 @@ async function deleteItem(id) {
     } catch (error) {
         console.error("Fel vi delete: " + error);
     }
+}
+
+// Formaterar datumsträngen till åååå-mm-dd
+function formatDate(dateString) {
+  return dateString.split("T")[0];
 }
 
 
