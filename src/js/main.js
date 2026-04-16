@@ -22,9 +22,17 @@ async function loadData() {
             <p>${item.jobtitle} - ${item.location}</p>
             <p>${item.startdate} - ${item.enddate}</p>
             <p>${item.description}</p>
-            <button data-id="${item.id}">Delete</button>
+            <button class="delete-btn" data-id="${item.id}">Delete</button>
         `;
 
         container.appendChild(div);
+    });
+
+    // Event-lyssnare på delete-knappen
+    document.querySelectorAll(".delete-btn").forEach(btn => {
+        btn.addEventListener("click", ()=>{
+            const id = btn.dataset.id;
+            deleteItem(id);
+        });
     });
 }
