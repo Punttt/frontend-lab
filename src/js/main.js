@@ -1,5 +1,9 @@
 const apiUrl = "http://localhost:3000/api/workexperience";
 
+document.addEventListener("DOMContentLoaded", () => {
+  loadData();
+});
+
 async function loadData() {
     const res = await fetch(apiUrl);
     const data = await res.json();
