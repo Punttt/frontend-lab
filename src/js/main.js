@@ -1,9 +1,5 @@
 const apiUrl = "http://localhost:3000/api/workexperience";
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadData();
-});
-
 async function loadData() {
     try{
         const res = await fetch(apiUrl);
@@ -57,8 +53,13 @@ async function deleteItem(id) {
 
         // Laddar om sidan på nytt.
         loadData();
-        
+
     } catch (error) {
         console.error("Fel vi delete: " + error);
     }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  loadData();
+});
