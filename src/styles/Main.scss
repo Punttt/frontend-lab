@@ -109,6 +109,8 @@ header {
             textarea {
                 min-height: 120px;
                 margin-bottom: 1rem;
+                font: inherit;
+                padding: 0.5rem 1rem;
             }
             input[type="submit"] {
                 display: inline-block;
