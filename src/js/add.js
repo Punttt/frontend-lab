@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:3000/api/workexperience";
+const apiUrl = "https://backend-lab-53gq.onrender.com/api/workexperience";
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("add-work");
