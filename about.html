@@ -20,7 +20,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="main-about">
       <div class="container-sm">
         <h2>Om webbplatsen</h2>
 
@@ -36,7 +36,18 @@
         <section>
           <h3>Databas och server</h3>
           <p>
-            Applikationen använder en MySQL-databas som körs på en 
+            Applikationen använder postgreSQL databas som körs på Render. Backend är byggd node och express och kommunicerar med databasen via pg klienten. 
+            All data hanteras genom ett eget REST api som tillhandahåller CRUD funktionalitet. Frontedn och backend är två separata tjänster, där backend är publicerad
+            som en webbtjänst på Render och frontend är publicerad som en statisk webbplats via Netlify.
+          </p>
+        </section>
+
+        <section>
+          <h3>Slutsatser</h3>
+          <p>
+            Genom att arbeta med denna laboration har jag fått en tydligare förståelse för hur backend och frontend samarbetar med varandra. Samt en djupare förståelse kring webbtjänster. Jag 
+            har lärt mig hur man bygger ett eget REST api, hur man strukturerar en databas i postGre och hur man publicerar båda backend och databas via Render. Projektet har även gett repition inom fetch anrop,
+            JSON-hantering, DOM manipulation och multipage inom Vite. Sammanfattat har uppgiften stärkt min förståelse inom pegreppet fullstack-utvecklaing och hur man bygger en komplett webb applikation.
           </p>
         </section>
 
