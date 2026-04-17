@@ -59,6 +59,16 @@ main {
                 background-color: beige;
                 padding: 1rem;
                 border-radius: 8px;
+                .date {
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                }
+                .description{
+                    display: block;
+                    margin-bottom: 1rem;
+                }
             }
         }
     }

@@ -18,7 +18,7 @@ async function loadData() {
                 <h3>${item.companyname}</h3>
                 <p class="title">${item.jobtitle} - ${item.location}</p>
                 <span class="date">${formatDate(item.startdate)} - ${formatDate(item.enddate)}</span>
-                <span class="des">${item.description}</span>
+                <span class="description">${item.description}</span>
                 <button class="delete-btn" data-id="${item.id}">Delete</button>
             `;
 
