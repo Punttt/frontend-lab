@@ -40,7 +40,6 @@ async function loadData() {
 
 // Funktion för delete
 async function deleteItem(id) {
-    console.log(id);
     try {
         const res = await fetch(`${apiUrl}/${id}`, {
             method: "DELETE"
