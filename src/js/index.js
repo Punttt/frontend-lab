@@ -1,4 +1,5 @@
 const apiUrl = "https://backend-lab-53gq.onrender.com/api/workexperience";
+import '../styles/main.scss'
 
 async function loadData() {
     try{
