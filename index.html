@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab - Startsidan</title>
-    <link rel="stylesheet" href="/src/styles/Main.scss">
+    <link rel="stylesheet" href="./src/styles/main.scss">
   </head>
   <body>
     <header>
       <div class="container">
-        <h1>LOGO</h1>
+        <h1>{LOGO}</h1>
         <nav>
           <ul>
             <li><a href="/">Hem</a></li>
@@ -20,11 +20,12 @@
       </div>
     </header>
 
-    <main>
-      <div class="container">
+    <main class="main-index">
+      <div class="container-sm">
         <h2>Startsidan</h2>
+        <div id="list"></div>
       </div>
     </main>
-    <script type="module" src="/src/styles/main.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>
