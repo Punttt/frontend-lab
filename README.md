@@ -98,7 +98,7 @@ Frontend har testats med:
   - thunderclient för api testning
 
 ### Publicering
-
+Netlify: https://laboration-cv.netlify.app/
 
 ## Skapad av
 Pontus Johansson
