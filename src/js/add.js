@@ -4,6 +4,7 @@ import '../styles/main.scss'
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("add-work");
     const errorMessage = document.getElementById("errorMessage");
+    const successMessage = document.getElementById("successMessage");
 
 
     form.addEventListener("submit", async(e) => {
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Kunde inte spara posten");
                 return;
             } 
+            successMessage.textContent = "Den nya posten är nu sparad!"
             errorMessage.textContent = "";
             form.reset();
 
