@@ -18,6 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
             description: document.getElementById("description").value.trim()
         };
 
+        if(
+            !companyname ||
+            !jobtitle ||
+            !location ||
+            !startdate ||
+            !enddate ||
+            !description
+        ){
+            errorMessage.textContent = "Alla fält måste fyllas i.";
+            console.log("alla fält måste fyllas i.")
+            return;
+        }
+
         try {
             const res = await fetch(apiUrl, {
                 method: "POST",
