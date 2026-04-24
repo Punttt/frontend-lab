@@ -68,6 +68,39 @@ npm install
 npm run dev
 
 ```
+## Validering
+**POST - Lägga till ny post**
+När användaren skickar i formuläret kontrolleras följande fält:
+  -  companyname
+  -  jobtitle
+  -  location
+  -  startdate
+  -  enddate
+  -  desciption
+Om någon av de fältet är tomt så visas felmeddelandet: "Alla fält måste fyllas i"
+Om kormuläret fylls i korrekt så visas ett success-meddelande: "Dena ny posten är nu sparad!"
+
+**DELETE - Radera post**
+När användaren klickar på delete skickas ett delete anrop till API et
+  - Vid lyckad radering visas ett success meddelande: "Posten har raderats"
+  - Vid fel visas ett felmeddelande: "Kunde inte radera posten"
+
+**CSS för error- och successmeddelanden**
+```
+.error {
+    color: red;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    background-color: antiquewhite;
+}
+
+.success {
+    color: green;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    background-color: antiquewhite;
+}
+```
 
 ## Funktionalitet
 ### Sidorpå webbplatsen
