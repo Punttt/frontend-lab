@@ -22,7 +22,6 @@
     <main class="main-add">
       <div class="container-sm">
         <h2>Lägga till</h2>
-
         <form id="add-work">
           <label for="companyname">Företag:</label>
           <input type="text" name="companyname" id="companyname">
@@ -42,6 +41,8 @@
           <label for="description">Beskrivning:</label>
           <textarea name="description" id="description"></textarea>
 
+          <p id="errorMessage" class="error"></p>
+          <p id="successMessage" class="success"></p>
           <input type="submit" value="Spara">
         </form>
       </div>

@@ -3,19 +3,35 @@ import '../styles/main.scss'
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("add-work");
+    const errorMessage = document.getElementById("errorMessage");
+    const successMessage = document.getElementById("successMessage");
+
 
     form.addEventListener("submit", async(e) => {
         e.preventDefault();
 
         // Skapar ett objekt för varje input
         const newItem = {
-            companyname: document.getElementById("companyname").value,
-            jobtitle: document.getElementById("jobtitle").value,
-            location: document.getElementById("location"). value,
-            startdate: document.getElementById("startdate").value,
-            enddate: document.getElementById("enddate").value,
-            description: document.getElementById("description").value
+            companyname: document.getElementById("companyname").value.trim(),
+            jobtitle: document.getElementById("jobtitle").value.trim(),
+            location: document.getElementById("location").value.trim(),
+            startdate: document.getElementById("startdate").value.trim(),
+            enddate: document.getElementById("enddate").value.trim(),
+            description: document.getElementById("description").value.trim()
         };
+
+        if(
+            !newItem.companyname ||
+            !newItem.jobtitle ||
+            !newItem.location ||
+            !newItem.startdate ||
+            !newItem.enddate ||
+            !newItem.description
+        ){
+            successMessage.textContent = "";
+            errorMessage.textContent = "Alla fält måste fyllas i.";
+            return;
+        }
 
         try {
             const res = await fetch(apiUrl, {
@@ -27,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if(!res) {
                 console.error("Kunde inte spara posten");
                 return;
-            }
-
-            alert("Post sparad!");
+            } 
+            errorMessage.textContent = "";
+            successMessage.textContent = "Den nya posten är nu sparad!"
             form.reset();
 
         } catch (error) {
