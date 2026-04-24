@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Skapar ett objekt för varje input
         const newItem = {
-            companyname: document.getElementById("companyname").value,
-            jobtitle: document.getElementById("jobtitle").value,
-            location: document.getElementById("location"). value,
-            startdate: document.getElementById("startdate").value,
-            enddate: document.getElementById("enddate").value,
-            description: document.getElementById("description").value
+            companyname: document.getElementById("companyname").value.trim(),
+            jobtitle: document.getElementById("jobtitle").value.trim(),
+            location: document.getElementById("location").value.trim(),
+            startdate: document.getElementById("startdate").value.trim(),
+            enddate: document.getElementById("enddate").value.trim(),
+            description: document.getElementById("description").value.trim()
         };
 
         try {
