@@ -3,6 +3,7 @@ import '../styles/main.scss'
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("add-work");
+    const errorMessage = document.getElementById("errorMessage");
 
     form.addEventListener("submit", async(e) => {
         e.preventDefault();
