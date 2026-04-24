@@ -1,5 +1,5 @@
 const apiUrl = "https://backend-lab-53gq.onrender.com/api/workexperience";
-import '../styles/main.scss'
+import '../styles/main.scss' 
 
 async function loadData() {
     try{
@@ -41,6 +41,8 @@ async function loadData() {
 
 // Funktion för delete
 async function deleteItem(id) {
+    const deleteMessage = document.getElementById("deleteMessage");
+
     try {
         const res = await fetch(`${apiUrl}/${id}`, {
             method: "DELETE"
@@ -48,8 +50,15 @@ async function deleteItem(id) {
 
         if(!res.ok) {
             console.error("Kunde inte radera posten");
+            deleteMessage.textContent = "Kunde inte radera posten.";
+            deleteItem.classList.remove("success");
+            deleteItem.classList.add("error");
             return;
         }
+
+        deleteMessage.textContent = "Posten har raderats!";
+        deleteMessage.classList.remove("error");
+        deleteMessage.classList.add("success");
 
         // Laddar om sidan på nytt.
         loadData();
