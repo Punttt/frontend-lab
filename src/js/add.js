@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             !newItem.enddate ||
             !newItem.description
         ){
+            successMessage.textContent = "";
             errorMessage.textContent = "Alla fält måste fyllas i.";
             return;
         }
@@ -43,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Kunde inte spara posten");
                 return;
             } 
-            successMessage.textContent = "Den nya posten är nu sparad!"
             errorMessage.textContent = "";
+            successMessage.textContent = "Den nya posten är nu sparad!"
             form.reset();
 
         } catch (error) {
