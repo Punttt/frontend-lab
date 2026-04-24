@@ -27,9 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if(!res) {
                 console.error("Kunde inte spara posten");
                 return;
-            }
-
-            alert("Post sparad!");
+            } 
             form.reset();
 
         } catch (error) {

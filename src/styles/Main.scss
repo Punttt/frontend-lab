@@ -20,6 +20,13 @@ body {
     font-size: 14px;
 }
 
+.errorMessage {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: tomato;
+    font-weight: 600;
+}
+
 header {
     background-color: tomato;
     color: white;
