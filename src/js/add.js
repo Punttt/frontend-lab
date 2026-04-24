@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("add-work");
     const errorMessage = document.getElementById("errorMessage");
 
+
     form.addEventListener("submit", async(e) => {
         e.preventDefault();
 
@@ -19,15 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         if(
-            !companyname ||
-            !jobtitle ||
-            !location ||
-            !startdate ||
-            !enddate ||
-            !description
+            !newItem.companyname ||
+            !newItem.jobtitle ||
+            !newItem.location ||
+            !newItem.startdate ||
+            !newItem.enddate ||
+            !newItem.description
         ){
             errorMessage.textContent = "Alla fält måste fyllas i.";
-            console.log("alla fält måste fyllas i.")
             return;
         }
 
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Kunde inte spara posten");
                 return;
             } 
+            errorMessage.textContent = "";
             form.reset();
 
         } catch (error) {
